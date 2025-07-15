@@ -1,2 +1,3 @@
-src/marcher.o
+src/lib/marcher.o
+src/main.o
 marcher

@@ -2,7 +2,6 @@
 #define _MARCHER_H
 
 enum TokenType{
-
   TOKEN_EOF,
   TOKEN_LEFT_PAREN,
   TOKEN_RIGHT_PAREN,

@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -O0 -g
 
 TARGET = marcher
 
-SRCS = src/marcher.c
+SRCS = src/main.c src/lib/marcher.c 
 
 OBJS = $(SRCS:.c=.o)
 

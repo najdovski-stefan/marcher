@@ -1,0 +1,5 @@
+//Example Pelisterlang source code
+// This is comment
+
+var x = 4;
+var b  = 1 + (sin(x)+5^4)/20;

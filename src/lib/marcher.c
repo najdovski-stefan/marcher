@@ -1,6 +1,5 @@
 #include "marcher.h"
-#include <stdbool.h>
-#include <string.h>
+
 
 
 Lexer lexer;

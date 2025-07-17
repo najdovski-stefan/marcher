@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
-#include "marcher.c"
+#include "lib/marcher.h"
 
 /*
  * GOAL for scanner:

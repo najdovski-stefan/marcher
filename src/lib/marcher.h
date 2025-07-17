@@ -1,7 +1,7 @@
 #ifndef _MARCHER_H
 #define _MARCHER_H
-
-#include <cstring>
+#include <stdbool.h>
+#include <string.h>
 #define MAX_LEXEME_LENGTH 100
 
 typedef enum TokenType{

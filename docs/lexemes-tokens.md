@@ -18,7 +18,15 @@ Lexeme{
 - Single characters
 - Literals
     - Identifiers
-    - Strings 
+    - Strings
     - Numbers
-- Keywords 
+- Keywords
 - EOF/UNK?
+
+
+### Token
+
+struct Token{
+  Lexeme;
+  contents;
+}

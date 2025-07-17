@@ -4,7 +4,7 @@
 #include <cstring>
 #define MAX_LEXEME_LENGTH 100
 
-enum TokenType{
+typedef enum TokenType{
   TOKEN_UNK,
   TOKEN_EOF,
 
@@ -12,7 +12,7 @@ enum TokenType{
   TOKEN_RIGHT_PAREN,
   TOKEN_EQ,
   TOKEN_EQ_EQ,
-};
+}TokenType;
 
 typedef struct Token{
     TokenType type;
@@ -26,41 +26,11 @@ typedef struct Lexer{
     int current;
 }Lexer;
 
-Lexer lexer;
-
-void initLexer(const char* source){
-    lexer.src = source;
-    lexer.start = 0;
-    lexer.current = 0;
-}
-
-static bool isAtEnd(){
-    return lexer.src[lexer.current] == '\0';
-}
-
-static char advance(){
-    lexer.current++;
-    return lexer.src[lexer.current-1];
-}
-
-static char peek(){
-    return lexer.src[lexer.current];
-}
-
-static Token createToken(TokenType type) {
-    Token token;
-    token.type = type;
-    int length = lexer.current - lexer.start;
-
-    if(length >= MAX_LEXEME_LENGTH) {
-        length = MAX_LEXEME_LENGTH - 1;
-    }
-    //TODO: make this more safe
-    strncpy(token.lexeme, lexer.src + lexer.start, length);
-    token.lexeme[length] = '\0';
-
-    return token;
-}
+void initLexer(const char* source);
+static bool isAtEnd();
+static char advance();
+static char peek();
+static Token createToken(TokenType type);
 
 
 #endif //_MARCHER_H
